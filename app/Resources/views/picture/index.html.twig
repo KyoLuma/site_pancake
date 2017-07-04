@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="introduce_block">
+        <h2>Photographie</h2>
+        <p class="flow-text">
+            <img src="{{ asset('http://image.noelshack.com/fichiers/2017/25/2/1497971220-wild-goose-2260866-1920.jpg') }}" alt="" class="introduce_img">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque cupiditate debitis,
+            delectus dignissimos dolor ea error fugiat id molestiae nihil provident quae sit suscipit vero.
+            Autem consectetur praesentium sunt!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque cupiditate debitis,
+            delectus dignissimos dolor ea error fugiat id molestiae nihil provident quae sit suscipit vero.
+            Autem consectetur praesentium sunt!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque cupiditate debitis,
+            delectus dignissimos dolor ea error fugiat id molestiae nihil provident quae sit suscipit vero.
+            Autem consectetur praesentium sunt!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque cupiditate debitis,
+            delectus dignissimos dolor ea error fugiat id molestiae nihil provident quae sit suscipit vero.
+            Autem consectetur praesentium sunt!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque cupiditate debitis,
+            delectus dignissimos dolor ea error fugiat id molestiae nihil provident quae sit suscipit vero.
+            Autem consectetur praesentium sunt!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque cupiditate debitis,
+            delectus dignissimos dolor ea error fugiat id molestiae nihil provident quae sit suscipit vero.
+            Autem consectetur praesentium sunt!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque cupiditate debitis,
+            delectus dignissimos dolor ea error fugiat id molestiae nihil provident quae sit suscipit vero.
+            Autem consectetur praesentium sunt!
+        </p>
+    </div>
+    <div class="content_logo">
+        <ul>
+            <li>
+                <a href="{{ path('picture_new') }}" class="btn_perso"><span class="text_btn_perso">AJOUTER</span></a>
+            </li>
+        </ul>
+
+
+        <div class="content_all_parent">
+            {% for picture in pictures %}
+                <div class="logo_block">
+                        <div class="animation">
+                            <div class="div_img">
+                                <img src="{{ picture.urlPicture }}" alt="" class="icone_img">
+                            </div>
+                            <div class="openanimation">
+                                <div class="text_logo_content">
+                                    <p class="p_center">{{ picture.title }}</p>
+                                    <p class="p_center">{% if picture.creationDate %}{{ picture.creationDate|date('Y-m-d') }}{% endif %}</p>
+                                    <p class="p_center little_btn_perso"><a href="{{ path('picture_show', { 'id': picture.id }) }}">show</a></p class="p_center">
+                                    <p class="p_center little_btn_perso"><a href="{{ path('picture_edit', { 'id': picture.id }) }}">edit</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+
+{% endblock %}

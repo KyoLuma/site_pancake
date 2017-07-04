@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Drawing</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ drawing.id }}</td>
+            </tr>
+            <tr>
+                <th>Urlpicture</th>
+                <td>{{ drawing.urlPicture }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ drawing.title }}</td>
+            </tr>
+            <tr>
+                <th>Creationdate</th>
+                <td>{% if drawing.creationDate %}{{ drawing.creationDate|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ drawing.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('drawing_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('drawing_edit', { 'id': drawing.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

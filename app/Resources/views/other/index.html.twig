@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Others list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Urlpicture</th>
+                <th>Title</th>
+                <th>Creationdate</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for other in others %}
+            <tr>
+                <td><a href="{{ path('other_show', { 'id': other.id }) }}">{{ other.id }}</a></td>
+                <td>{{ other.urlPicture }}</td>
+                <td>{{ other.title }}</td>
+                <td>{% if other.creationDate %}{{ other.creationDate|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ other.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('other_show', { 'id': other.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('other_edit', { 'id': other.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('other_new') }}">Create a new other</a>
+        </li>
+    </ul>
+{% endblock %}

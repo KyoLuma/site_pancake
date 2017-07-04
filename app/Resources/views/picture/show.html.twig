@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Picture</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Title</th>
+                <td>{{ picture.title }}</td>
+            </tr>
+            <tr>
+                <th>Urlpicture</th>
+                <td><img src="{{ picture.urlPicture }}" alt=""></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ picture.description }}</td>
+            </tr>
+            <tr>
+                <th>Creationdate</th>
+                <td>{% if picture.creationDate %}{{ picture.creationDate|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('picture_index') }}" class="btn_perso">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('picture_edit', { 'id': picture.id }) }}" class="btn_perso">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" class="btn_perso" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

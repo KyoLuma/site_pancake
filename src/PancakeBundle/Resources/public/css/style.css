@@ -1,0 +1,262 @@
+body{
+    background-color: #ebebeb;
+}
+h1{
+
+    font-family: 'Covered By Your Grace';
+    text-align: center;
+    color: #ba3d3b;
+    font-size: 100px;
+
+}
+.main_title{
+    font-size: 150px;
+    letter-spacing: 3px;
+    text-shadow: 2px 3px 7px black;
+    color: #ebebeb;
+    opacity: .7;
+    padding-top: 30px;
+}
+h2{
+    color: #840705;
+    font-family: 'Covered By Your Grace';
+    text-align: right;
+}
+p{
+    font-family: 'Advent Pro';
+    color: #232323;
+}
+.p_center{
+    text-align: center;
+}
+a{
+    color: white!important;
+}
+header{
+    background: url('http://image.noelshack.com/fichiers/2017/26/1/1498460251-architecture-1867775.jpg');
+    background-size: cover;
+    margin-top: -32px;
+    min-height: 300px;
+}
+.header_filter{
+    background-color:#ebebeb;
+    background: -webkit-linear-gradient(transparent, #ebebeb); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(transparent, #ebebeb); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(transparent, #ebebeb); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(transparent, #ebebeb); /* Standard syntax */
+    width: 100%;
+    height: 300px;
+}
+.nav_content{
+    position: fixed;
+    margin-top: -20vh;
+}
+.nav_block{
+    background: #5e0202; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #5e0202 , transparent); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #5e0202, transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #5e0202, transparent); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right,#5e0202, transparent);
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 70px;
+    transition: .5s;
+    margin-bottom: 10px;
+}
+.nav_block:hover{
+    width: 120px;
+    transition: .5s;
+}
+.nav_word{
+    opacity: 0;
+    font-size: 18px;
+    color: white;
+    transition: .5s;
+    padding-left: 0;
+
+}
+.nav_block:hover .nav_word{
+    opacity: 1;
+    transition: .5s;
+    padding-left: 20px;
+
+}
+.introduce_block{
+    width: 70vw;
+    margin-top: 10vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    text-align: justify;
+}
+.introduce_text{
+    font-size: 17px;
+}
+.introduce_img{
+    width: 35%;
+    float: left;
+    margin-right: 30px;
+    border: 2px solid #5e0202;
+    box-shadow: 0px 0px 8px gray;
+}
+.btn_perso{
+    display: block;
+    margin: 0px auto 10px auto;
+    text-align: center;
+    width: 300px;
+    background: #5e0202; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#8e0101 , #5e0202); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#8e0101, #5e0202); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#8e0101, #5e0202); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#8e0101, #5e0202);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    padding: 7px 0px 7px 0px;
+    font-weight: 700;
+    color: #ebebeb;
+    font-family: 'Advent Pro';
+    font-size: 20px;
+    transition: .3s;
+    text-transform: uppercase;
+    border: none;
+}
+.little_btn_perso{
+    display: block;
+    margin: 0px auto 5px auto;
+    text-align: center;
+    width: 80px;
+    background: #5e0202; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#8e0101 , #5e0202); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#8e0101, #5e0202); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#8e0101, #5e0202); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#8e0101, #5e0202);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    padding: 7px 0px 7px 0px;
+    font-weight: 700;
+    color: #ebebeb;
+    font-family: 'Advent Pro';
+    font-size: 20px;
+    transition: .3s;
+    text-transform: uppercase;
+}
+.btn_perso:hover{
+    box-shadow: 2px 2px 8px black;
+    transition: .3s;
+}
+.little_btn_perso:hover{
+    box-shadow: 2px 2px 8px black;
+    transition: .3s;
+}
+.btn_perso:active{
+    color: yellow;
+}
+.content_logo{
+    width: 70vw;
+    margin: auto;
+}
+.content_all_parent{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.logo_block{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.icone_img{
+    height: 100%;
+    visibility: visible;
+    transition : all .5s;
+    display: block;
+    margin: auto;
+}
+.div_img{
+    width: 100%;
+    height: 100%;
+}
+.animation{
+    width: 330px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #5e0202;
+    box-shadow: 0px 0px 4px black;
+    transition: .5s all;
+}
+.openanimation{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s all;
+    background-color: rgba(96,96,96, 0.7);
+}
+.animation:hover .openanimation{
+    bottom: 0;
+    height: 100%;
+    opacity: 1;
+    transition: .5s all;
+}
+.animation:hover{
+    box-shadow: 0px 0px 1px black;
+    transition: .5s all;
+}
+.text_logo_content{
+    margin-top: 10%
+}
+.show_text{
+    background-color: #840705;
+    width: 70px;
+    padding: 5px;
+    display: block;
+    margin: auto;
+    font-size: 18px;
+    transition: all .3s;
+    border: 1px solid #4f0000;
+    box-shadow: 2px 1px 3px black;
+}
+.show_text:hover{
+    background-color: #AA3333;
+    transition: all .3s;
+}.edit_text{
+    background-color: #5e0202;
+    width: 70px;
+    padding: 5px;
+    display: block;
+    margin: 10px auto;
+    font-size: 18px;
+    transition: all .3s;
+    border: 1px solid #4f0000;
+    box-shadow: 2px 1px 3px black;
+}
+.edit_text:hover{
+    background-color: #AA3333;
+    transition: all .3s;
+}
+footer{
+    margin-top: 20vh;
+}
+.footer_bottom{
+    min-height: 3vh;
+    background-color: #444444;
+}
+.footer_img{
+    background: url('http://image.noelshack.com/fichiers/2017/26/1/1498460251-architecture-1867775.jpg');
+    background-size: cover;
+    min-height: 200px;
+    background-position: bottom;
+}
+.footer_filter{
+    height: 200px;
+    background-color:  #ebebeb;
+    background: -webkit-linear-gradient( #ebebeb, transparent); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient( #ebebeb, transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient( #ebebeb, transparent); /* For Firefox 3.6 to 15 */
+    background: linear-gradient( #ebebeb, transparent); /* Standard syntax */
+}

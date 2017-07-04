@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Pancake{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('http://image.noelshack.com/fichiers/2017/21/1495820391-favicon-2.png') }}" />
+
+        <!--Import Google Icon Font-->
+        <link href="{{ 'http://fonts.googleapis.com/icon?family=Material+Icons' }}" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="{{ asset('bundles/pancake/css/materialize.min.css') }}"  media="screen,projection"/>
+        <link rel="stylesheet" href="{{ asset('bundles/pancake/css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Covered+By+Your+Grace" rel="stylesheet">
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+    {% block header %}
+        <header>
+            <div class="header_filter">
+                <h1 class="main_title">Portfolio</h1>
+            </div>
+        </header>
+        <div class="nav_content">
+            <div class="nav_block"><p class="nav_word"><a href="{{ path('gindex') }}">Accueil</a></p></div>
+            <div class="nav_block"><p class="nav_word"><a href="{{ path('drawing_index') }}">Dessin</a></p></div>
+            <div class="nav_block"><p class="nav_word"><a href="{{ path('picture_index') }}">Photos</a></p></div>
+            <div class="nav_block"><p class="nav_word"><a href="{{ path('text_index') }}">Ecrits</a></p></div>
+            <div class="nav_block"><p class="nav_word"><a href="{{ path('other_index') }}">Autres</a></p></div>
+        </div>
+    {% endblock %}
+        {% block body %}
+
+        {% endblock %}
+        {% block footer %}
+            <footer>
+                <div class="footer_img">
+                    <div class="footer_filter">
+                    </div>
+                </div>
+                <div class="footer_bottom"></div>
+            </footer>
+        {% endblock %}
+        {% block javascripts %}<!--Import jQuery before materialize.js-->
+            <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <script type="text/javascript" src="js/materialize.min.js"></script>{% endblock %}
+    </body>
+</html>

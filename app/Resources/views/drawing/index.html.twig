@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Drawings list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Urlpicture</th>
+                <th>Title</th>
+                <th>Creationdate</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for drawing in drawings %}
+            <tr>
+                <td><a href="{{ path('drawing_show', { 'id': drawing.id }) }}">{{ drawing.id }}</a></td>
+                <td>{{ drawing.urlPicture }}</td>
+                <td>{{ drawing.title }}</td>
+                <td>{% if drawing.creationDate %}{{ drawing.creationDate|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ drawing.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('drawing_show', { 'id': drawing.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('drawing_edit', { 'id': drawing.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('drawing_new') }}">Create a new drawing</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,5 @@
+pancake:
+    resource: "@PancakeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
